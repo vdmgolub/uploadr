@@ -3,11 +3,13 @@ class ImagesController < ApplicationController
   end
 
   def new
+    @max_file_size = Integer(ENV['MAX_FILE_SIZE'] || 2)
+
     @options = {
       key: "uploads/#{ENV['S3_TEMP_DIR']}/#{SecureRandom.hex}-{unique_id}-${filename}",
       key_starts_with: 'uploads/',
       acl: 'public-read',
-      max_file_size: Integer(ENV['MAX_FILE_SIZE'] || 2).megabytes,
+      max_file_size: @max_file_size.megabytes,
       id: 's3-uploader',
       class: 'upload-form',
       data: { key: :val }

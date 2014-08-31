@@ -6,3 +6,8 @@
   max-width: 100%;
   height: auto;
 }
+
+.subheader span {
+  font-style: italic;
+  color: grey;
+}
