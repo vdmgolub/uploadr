@@ -9,4 +9,12 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'jquery-rails'
 gem 'foundation-rails'
 
-gem 'spring',        group: :development
+gem 's3_direct_upload'
+
+gem 'pry-rails'
+gem 'awesome_print'
+
+group :development do
+  gem 'spring'
+  gem 'dotenv-rails'
+end
