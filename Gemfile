@@ -11,6 +11,9 @@ gem 'foundation-rails'
 
 gem 's3_direct_upload'
 gem 'jcrop-rails-v2'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 gem 'pry-rails'
 gem 'awesome_print'
