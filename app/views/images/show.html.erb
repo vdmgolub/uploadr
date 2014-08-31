@@ -1,0 +1,14 @@
+<div class='row'>
+  <div class='small-12 columns'>
+    <%= link_to 'One more?', new_image_path %><hr/>
+    <div>
+      <h4>Medium</h4>
+      <%= image_tag @image.file.url(:medium), id: 'medium-image' %>
+    </div>
+
+    <div>
+      <h4>Large</h4>
+      <%= image_tag @image.file.url(:large), id: 'large-image' %>
+    </div>
+  </div>
+</div>
