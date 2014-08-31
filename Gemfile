@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'foundation-rails'
 
 gem 's3_direct_upload'
+gem 'jcrop-rails-v2'
 
 gem 'pry-rails'
 gem 'awesome_print'

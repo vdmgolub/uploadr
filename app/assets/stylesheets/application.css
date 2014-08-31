@@ -13,6 +13,7 @@
  *= require_tree .
  *= require foundation_and_overrides
  *= require s3_direct_upload_progress_bars
+ *= require jquery.Jcrop.min
  *= require_self
  */
 

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require s3_direct_upload
+//= require jquery.Jcrop.min
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
