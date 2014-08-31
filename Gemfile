@@ -7,5 +7,6 @@ gem 'sqlite3'
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'jquery-rails'
+gem 'foundation-rails'
 
 gem 'spring',        group: :development
