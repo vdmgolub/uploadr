@@ -20,3 +20,8 @@
 .content {
   margin-top: 20px;
 }
+
+.footer p {
+  float: right;
+  margin-right: 20px;
+}
