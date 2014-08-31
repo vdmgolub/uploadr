@@ -4,10 +4,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage :fog
 
   version :medium do
+    process :crop
     resize_to_fill(300, 300)
   end
 
   version :large do
+    process :crop
     resize_to_fill(600, 600)
   end
 
@@ -28,6 +30,20 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   protected
+
+  def crop
+    if model.cropping?
+      manipulate! do |img|
+        x = model.crop_x
+        y = model.crop_y
+        w = model.crop_w
+        h = model.crop_h
+
+        img.crop("#{w}x#{h}+#{x}+#{y}")
+        img
+      end
+    end
+  end
 
   def secure_token
     var = :"@#{mounted_as}_secure_token"
