@@ -1,0 +1,12 @@
+<h3 class='subheader'>Please crop the image</h3>
+<hr/>
+
+<p><%= image_tag '#', id: 'crop-image' %></p>
+
+<%= form_for @image do |f| %>
+  <% [:temp_url, :crop_x, :crop_y, :crop_w, :crop_h].each do |attr| %>
+    <%= f.hidden_field attr, id: attr %>
+  <% end %>
+
+  <p><%= f.submit 'Crop and save', class: 'button' %></p>
+<% end %>
